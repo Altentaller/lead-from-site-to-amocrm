@@ -28,7 +28,7 @@ if ( (!empty($_POST['phone'])) && (!empty($_POST['name'])) && (!empty($_POST['em
 		$apikey = 'your api key'; //api ключ
 		$amo = new \AmoCRM\Client($subdomain, $login, $apikey);
 
-		// Вывод информации об аккаунте)
+		// Вывод информации об аккаунте
 		echo '<pre>';
 		print_r($amo
 			->account
@@ -42,7 +42,7 @@ if ( (!empty($_POST['phone'])) && (!empty($_POST['name'])) && (!empty($_POST['em
 		$id = $lead->apiAdd(); // Добавление и получение ID новой сделки
 
 
-		$contact = $amo->contact; // Получение экземпляра модели для работы с контактами)
+		$contact = $amo->contact; // Получение экземпляра модели для работы с контактами
 		$contact['name'] = $_POST['name']; // Имя контакта
 		$contact['linked_leads_id'] = [(int)$id]; // ID связанной сделки
 		$contact->addCustomField(191385, [[$_POST['email'], 'PRIV'], ]); // Добавление email в соотв. поле
