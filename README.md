@@ -1,4 +1,4 @@
-# from-site-to-amocrm
+# lead-from-site-to-amocrm
 PHP form handler.  
 Integration with AmoCRM.  
 Creating lead+contact when submit form.  
